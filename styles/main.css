@@ -1,0 +1,22 @@
+/* main.css - Style dla index.html */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Przekierowanie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.Przekierowanie p {
+  transition: all 0.3s ease;
+}
+
+.Przekierowanie:hover p {
+  transform: translateX(8px);
+}

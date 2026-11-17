@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast web - formularze</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/stupka.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main_gora">
+        <header>
+          <div class="zawartosc_headera">
+            <!-- Kod SVG białej ikony formularza/dokumentu !!OPCJA TA ZOSTAŁA DODANA PRZEZ AI (TYLKO IKONA FORMULARZA), kompletnie nie wiem jak to robić i nie wytlumacze tego kodu, dodałem to tylko po to by było przyjemniej dla oka, mozna usunac jesli jest taka potrzeba bo moge to mniej wiecej wytlumaczyc ale nie napisalbym tego sam od zera!! -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <line x1="10" y1="9" x2="8" y2="9"></line>
+            </svg>
+
+            <strong><p class="napis_header">Fast formularze</p></strong>
+          </div>
+        </header>
+        <div class="Napis_powitalny">
+          <p>Welcome | <u>@user</u></p>
+        </div>
+
+        <div class="trzy_kreski">
+          <!-- Trzy kreski -->
+          <button id="trzy_kreski" class="trzy_kreski">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Rozwijana lista -->
+          <div id="select_menu" class="select_menu">
+            <a href="formularz.html">Formularz</a>
+            <a href="baza.html">Baza danych</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="Przekierowanie">
+        <a href="formularz.html">Wypełnij formularz</a>
+        <p>→</p>
+      </div>
+    </main>
+    <script src="../scripts/select_menu.js"></script>
+
+    <footer>
+      <div class="main_footer">
+        <div class="lewo_stupka">
+          <h5><u>Strona przygotowana przeze mnie</u></h5>
+        </div>
+        <div class="srodek_footer">
+          <ul>
+            <li><strong>Front-end :</strong> HTML | CSS</li>
+            <li><strong>Back-end :</strong> JS | JSON</li>
+            <li><strong>Baza danych :</strong> JSON</li>
+          </ul>
+        </div>
+        <div class="prawo_footer"><u>Prosta i minimalistyczna</u></div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "ostatnie_id": 1,
+  "formularze": [
+    {
+      "id": 1,
+      "numer": "#1",
+      "data": "2026-11-17T18:21:22.575Z",
+      "rodzaj_problemu": "Ciężki",
+      "skala_problemu": "Duża",
+      "wiele_osob": true,
+      "zdalnie": false,
+      "tytul": "Awaria elektrowni jondrowej",
+      "opis": "kabum",
+      "email": null
+    }
+  ]
+}

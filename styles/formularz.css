@@ -1,0 +1,112 @@
+.glowny_formularz {
+  width: 100%;
+  color: white;
+}
+
+.main_div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  min-height: 75vh;
+  padding: 40px 20px;
+}
+
+.lewy_form,
+.srodkowy_form,
+.prawy_form {
+  flex: 1;
+  max-width: 300px;
+}
+
+/* Stylizowanie ramek */
+fieldset {
+  height: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(
+    /* 2 razy jest background bo musza byc 2 tla i tle */ 90deg,
+    rgba(56, 56, 56, 1) 0%,
+    rgba(64, 64, 64, 1) 100%
+  );
+  border-radius: 6px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: inherit;
+  box-sizing: border-box; /* Zapobiega wychodzeniu poza krawędź */
+}
+
+.opcja_wyboru {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.opcja_wyboru input {
+  margin: 0;
+  cursor: pointer;
+}
+
+.opcja_wyboru label {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.przycisk_wyslij {
+  margin-top: auto;
+  padding: 12px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.5s ease;
+}
+.przycisk_wyslij p {
+  transition: all 0.3s ease;
+}
+.przycisk_wyslij:hover p {
+  transform: translateX(8px);
+}
+
+.przycisk_wyslij:hover {
+  background-color: #72abff;
+}
+.komunikat {
+  min-height: 1.2em;
+  margin: 0;
+  font-size: 13px;
+}
+
+.komunikat_ok {
+  color: #6ee7a0;
+}
+
+.komunikat_blad {
+  color: #ff8a8a;
+}
+
+.przycisk_wyslij:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}

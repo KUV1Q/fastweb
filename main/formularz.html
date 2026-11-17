@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wypełnij formularz</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/formularz.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/stupka.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="main_gora">
+        <header>
+          <div class="zawartosc_headera">
+            <!-- Kod SVG białej ikony formularza/dokumentu !!OPCJA TA ZOSTAŁA DODANA PRZEZ AI (TYLKO IKONA FORMULARZA), kompletnie nie wiem jak to robić i nie wytlumacze tego kodu, dodałem to tylko po to by było przyjemniej dla oka, mozna usunac jesli jest taka potrzeba bo moge to mniej wiecej wytlumaczyc ale nie napisalbym tego sam od zera!! -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <line x1="10" y1="9" x2="8" y2="9"></line>
+            </svg>
+
+            <strong
+              ><p class="napis_header">
+                <a href="index.html">Fast formularze</a>
+              </p></strong
+            >
+          </div>
+        </header>
+        <div class="Napis_powitalny">
+          <p>Dziękujemy za wypełnianie formularza | <u>@user</u></p>
+        </div>
+
+        <div class="trzy_kreski">
+          <!-- Trzy kreski -->
+          <button id="trzy_kreski" class="trzy_kreski">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Rozwijana lista -->
+          <div id="select_menu" class="select_menu">
+            <a href="index.html">Dom</a>
+            <a href="baza.html">Baza danych</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="glowny_formularz">
+        <!-- ZMIANA: cały formularz owinięty w <form id="formularz"> -->
+        <form id="formularz" novalidate>
+          <div class="main_div">
+            <!-- LEWY PANEL -->
+            <div class="lewy_form">
+              <fieldset>
+                <legend>Sekcja menu</legend>
+                <!-- ZMIANA: dodane id i name -->
+                <select
+                  class="pierwszy_select"
+                  id="rodzaj_problemu"
+                  name="rodzaj_problemu"
+                >
+                  <option>Rodzaj problemu</option>
+                  <option>Ciężki</option>
+                  <option>Umiarkowany</option>
+                  <option>Łatwy</option>
+                </select>
+                <select
+                  class="drugi_select"
+                  id="skala_problemu"
+                  name="skala_problemu"
+                >
+                  <option>Skala problemu</option>
+                  <option>Duża</option>
+                  <option>Średnia</option>
+                  <option>Umiarkowana</option>
+                </select>
+
+                <div class="opcja_wyboru">
+                  <input type="checkbox" id="wiele_osob" />
+                  <label for="wiele_osob">Potrzeba &gt;1 osoby</label>
+                </div>
+                <div class="opcja_wyboru">
+                  <input type="checkbox" id="zdalnie" />
+                  <label for="zdalnie">Możliwość zdalna</label>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- ŚRODKOWY PANEL -->
+            <div class="srodkowy_form">
+              <fieldset>
+                <legend>Opisy</legend>
+                <label for="tytul">Krótki tytuł:</label>
+                <input
+                  type="text"
+                  id="tytul"
+                  placeholder="np. Awaria routera"
+                  maxlength="150"
+                />
+
+                <label for="opis">Dokładny opis:</label>
+                <textarea
+                  id="opis"
+                  rows="4"
+                  placeholder="Opisz problem ze szczegółami..."
+                  maxlength="5000"
+                ></textarea>
+
+                <!-- ZMIANA: miejsce na komunikat o wyniku wysyłania -->
+                <p id="komunikat" class="komunikat" role="status"></p>
+
+                <button type="submit" class="przycisk_wyslij">
+                  Wyślij zgłoszenie
+                  <p>→</p>
+                </button>
+              </fieldset>
+            </div>
+
+            <!-- PRAWY PANEL -->
+            <div class="prawy_form">
+              <fieldset>
+                <legend>Zakończenie</legend>
+                <label for="email">Kontakt (Email):</label>
+                <input type="email" id="email" placeholder="twoj@email.com" />
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="main_footer">
+        <div class="lewo_stupka">
+          <h5><u>Strona przygotowana przeze mnie</u></h5>
+        </div>
+        <div class="srodek_footer">
+          <ul>
+            <li><strong>Front-end :</strong> HTML | CSS</li>
+            <li><strong>Back-end :</strong> JS | JSON</li>
+            <li><strong>Baza danych :</strong> JSON</li>
+          </ul>
+        </div>
+        <div class="prawo_footer"><u>Prosta i minimalistyczna</u></div>
+      </div>
+    </footer>
+
+    <script src="../scripts/select_menu.js"></script>
+    <!-- ZMIANA: skrypt wysyłający formularz -->
+    <script src="../scripts/wyslij.js"></script>
+  </body>
+</html>
